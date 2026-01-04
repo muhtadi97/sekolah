@@ -1,7 +1,7 @@
 /**
  * charts.js - Library untuk visualisasi data sekolah
  * Versi: 1.0.0
- * Author: Tim IT SMA Negeri 1 Mandiri
+ * Author: Mukhtadi Arijuddin
  */
 
 class SchoolCharts {
