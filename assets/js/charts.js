@@ -1,7 +1,8 @@
 /**
  * charts.js - Library untuk visualisasi data sekolah
  * Versi: 1.0.0
- * Author: Mukhtadi Arijuddin
+ * Author: Mukhtadi Arijuddin (2524372085)
+ * Dibuat untuk UAS Mata Kuliah Website Multimedia
  */
 
 class SchoolCharts {
