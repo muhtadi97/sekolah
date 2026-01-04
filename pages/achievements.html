@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prestasi - SMA Negeri 1 Mandiri</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../assets/css/pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Chart.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo-container">
+                <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Logo SMA Negeri 1 Mandiri" class="logo">
+                <div class="school-name">
+                    <h1>SMA NEGERI 1 MANDIRI</h1>
+                    <p class="slogan">"Unggul dalam Prestasi, Berkarakter, dan Berbudaya"</p>
+                </div>
+            </div>
+            
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li><a href="../index.html"><i class="fas fa-home"></i> Beranda</a></li>
+                    <li><a href="profile.html"><i class="fas fa-school"></i> Profil Sekolah</a></li>
+                    <li><a href="structure.html"><i class="fas fa-sitemap"></i> Struktur Organisasi</a></li>
+                    <li><a href="programs.html"><i class="fas fa-book-open"></i> Program Pendidikan</a></li>
+                    <li><a href="facilities.html"><i class="fas fa-building"></i> Fasilitas</a></li>
+                    <li><a href="achievements.html" class="active"><i class="fas fa-trophy"></i> Prestasi</a></li>
+                    <li class="dropdown">
+                        <a href="#"><i class="fas fa-bars"></i> Lainnya <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="news.html"><i class="fas fa-newspaper"></i> Berita</a></li>
+                            <li><a href="gallery.html"><i class="fas fa-images"></i> Galeri</a></li>
+                            <li><a href="teachers.html"><i class="fas fa-chalkboard-teacher"></i> Guru & Staf</a></li>
+                            <li><a href="students.html"><i class="fas fa-graduation-cap"></i> Siswa & Alumni</a></li>
+                            <li><a href="admission.html"><i class="fas fa-user-plus"></i> PPDB</a></li>
+                            <li><a href="contact.html"><i class="fas fa-address-book"></i> Kontak</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Prestasi Sekolah</h1>
+            <p>Catatan Keberhasilan dan Penghargaan SMA Negeri 1 Mandiri</p>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="../index.html">Beranda</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>Prestasi Sekolah</span>
+        </div>
+    </div>
+
+    <!-- Statistics Overview -->
+    <section class="content-section">
+        <div class="container">
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-number">140+</div>
+                    <div class="stat-label">Prestasi 5 Tahun Terakhir</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">45</div>
+                    <div class="stat-label">Prestasi Akademik</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">32</div>
+                    <div class="stat-label">Prestasi Olahraga</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">28</div>
+                    <div class="stat-label">Prestasi Seni & Budaya</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievement Charts -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Visualisasi Prestasi</h2>
+            
+            <div class="charts-grid">
+                <!-- Chart 1: Prestasi per Tahun -->
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h3><i class="fas fa-chart-line"></i> Tren Prestasi 5 Tahun Terakhir</h3>
+                        <div class="chart-actions">
+                            <button class="chart-action-btn" onclick="SchoolCharts.printChart('achievementChart')" title="Cetak">
+                                <i class="fas fa-print"></i>
+                            </button>
+                            <button class="chart-action-btn" onclick="SchoolCharts.exportChartAsImage('achievementChart', 'prestasi-tren.png')" title="Unduh">
+                                <i class="fas fa-download"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="chart-wrapper">
+                        <canvas id="achievementChart" height="300"></canvas>
+                    </div>
+                    <div class="chart-footer">
+                        <p><i class="fas fa-info-circle"></i> Data menunjukkan peningkatan konsisten prestasi sekolah di semua level</p>
+                    </div>
+                </div>
+                
+                <!-- Chart 2: Prestasi per Kategori -->
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h3><i class="fas fa-chart-pie"></i> Distribusi Prestasi per Kategori</h3>
+                    </div>
+                    <div class="chart-wrapper">
+                        <canvas id="achievementCategoryChart" height="300"></canvas>
+                    </div>
+                    <div class="chart-footer">
+                        <p><i class="fas fa-info-circle"></i> Prestasi akademik mendominasi dengan 45 penghargaan dalam 5 tahun terakhir</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prestasi Akademik -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Prestasi Akademik</h2>
+            
+            <div class="cards-container">
+                <div class="card achievement-card">
+                    <div class="achievement-badge">
+                        <i class="fas fa-medal gold"></i>
+                    </div>
+                    <div class="card-body">
+                        <h4>Olimpiade Sains Nasional (OSN) 2023</h4>
+                        <p><strong>Pencapaian:</strong> 3 Medali Emas, 2 Medali Perak, 1 Medali Perunggu</p>
+                        <p><strong>Siswa:</strong> Budi Santoso (Matematika), Siti Aisyah (Fisika), Rizki Ramadhan (Kimia)</p>
+                        <p><strong>Lokasi:</strong> Jakarta, Indonesia</p>
+                    </div>
+                </div>
+                
+                <div class="card achievement-card">
+                    <div class="achievement-badge">
+                        <i class="fas fa-medal silver"></i>
+                    </div>
+                    <div class="card-body">
+                        <h4>Kompetisi Robotik Nasional 2023</h4>
+                        <p><strong>Pencapaian:</strong> Juara 2 Kategori Robot Pemadam Api</p>
+                        <p><strong>Tim:</strong> Robotic Club SMA Negeri 1 Mandiri</p>
+                        <p><strong>Lokasi:</strong> Bandung, Indonesia</p>
+                    </div>
+                </div>
+                
+                <div class="card achievement-card">
+                    <div class="achievement-badge">
+                        <i class="fas fa-trophy gold"></i>
+                    </div>
+                    <div class="card-body">
+                        <h4>Kompetisi Debat Bahasa Inggris 2023</h4>
+                        <p><strong>Pencapaian:</strong> Juara 1 Tingkat Nasional</p>
+                        <p><strong>Tim:</strong> English Debate Team</p>
+                        <p><strong>Lokasi:</strong> Yogyakarta, Indonesia</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prestasi Olahraga -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Prestasi Olahraga</h2>
+            
+            <div class="achievement-table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Tahun</th>
+                            <th>Kompetisi</th>
+                            <th>Cabang</th>
+                            <th>Prestasi</th>
+                            <th>Atlet</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2023</td>
+                            <td>O2SN Tingkat Provinsi</td>
+                            <td>Basket Putra</td>
+                            <td>Juara 1</td>
+                            <td>Tim Basket SMA Negeri 1 Mandiri</td>
+                        </tr>
+                        <tr>
+                            <td>2023</td>
+                            <td>Kejurda Pencak Silat</td>
+                            <td>Pencak Silat</td>
+                            <td>2 Emas, 1 Perak</td>
+                            <td>Ahmad Fauzi, Siti Rahma, Rudi Hartono</td>
+                        </tr>
+                        <tr>
+                            <td>2022</td>
+                            <td>POPDA Tingkat Nasional</td>
+                            <td>Atletik</td>
+                            <td>Juara 2 Lari 100m</td>
+                            <td>Bambang Setiawan</td>
+                        </tr>
+                        <tr>
+                            <td>2022</td>
+                            <td>Kejurnas Futsal Pelajar</td>
+                            <td>Futsal Putri</td>
+                            <td>Juara 3</td>
+                            <td>Tim Futsal Putri</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prestasi Seni & Budaya -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Prestasi Seni & Budaya</h2>
+            
+            <div class="cards-container">
+                <div class="card achievement-card">
+                    <div class="card-header" style="background-color: #7c3aed;">
+                        <h3><i class="fas fa-music"></i> Paduan Suara</h3>
+                    </div>
+                    <div class="card-body">
+                        <h4>Festival Paduan Suara Nasional 2023</h4>
+                        <p><strong>Pencapaian:</strong> Juara 1 Kategori SMA</p>
+                        <p><strong>Pembimbing:</strong> Dra. Maria Ulfa</p>
+                        <p><strong>Jumlah Anggota:</strong> 40 siswa</p>
+                        <p><strong>Lagu:</strong> "Indonesia Raya" & "Bengawan Solo"</p>
+                    </div>
+                </div>
+                
+                <div class="card achievement-card">
+                    <div class="card-header" style="background-color: #059669;">
+                        <h3><i class="fas fa-theater-masks"></i> Teater</h3>
+                    </div>
+                    <div class="card-body">
+                        <h4>Festival Teater Pelajar Nasional 2023</h4>
+                        <p><strong>Pencapaian:</strong> Juara 1 Aktor Terbaik</p>
+                        <p><strong>Pembimbing:</strong> Drs. Budi Santoso</p>
+                        <p><strong>Judul Naskah:</strong> "Merah Putih di Hatiku"</p>
+                        <p><strong>Durasi:</strong> 45 menit</p>
+                    </div>
+                </div>
+                
+                <div class="card achievement-card">
+                    <div class="card-header" style="background-color: #dc2626;">
+                        <h3><i class="fas fa-palette"></i> Seni Rupa</h3>
+                    </div>
+                    <div class="card-body">
+                        <h4>Lukis dan Pameran Seni Rupa 2023</h4>
+                        <p><strong>Pencapaian:</strong> Juara 1 Lukis Kategori Realis</p>
+                        <p><strong>Siswa:</strong> Dian Sari</p>
+                        <p><strong>Judul Karya:</strong> "Wajah Pendidikan Indonesia"</p>
+                        <p><strong>Teknik:</strong> Oil on Canvas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prestasi Internasional -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Prestasi Internasional</h2>
+            
+            <div class="achievement-highlight">
+                <div class="highlight-icon">
+                    <i class="fas fa-globe-asia"></i>
+                </div>
+                <div class="highlight-content">
+                    <h3>International Science Olympiad (ISO) 2023</h3>
+                    <p><strong>Lokasi:</strong> Tokyo, Jepang</p>
+                    <p><strong>Pencapaian:</strong> Medali Perunggu Bidang Fisika</p>
+                    <p><strong>Siswa:</strong> Ahmad Fauzi (Kelas XII IPA 1)</p>
+                    <p><strong>Deskripsi:</strong> Bersaing dengan 500 peserta dari 40 negara di kompetisi sains internasional bergengsi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chart Controls -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Analisis Data</h2>
+            
+            <div class="chart-controls">
+                <div class="control-group">
+                    <label for="chartType"><i class="fas fa-chart-bar"></i> Tampilkan sebagai:</label>
+                    <select id="chartType" class="form-control" onchange="updateChartType(this.value)">
+                        <option value="bar">Bar Chart</option>
+                        <option value="line">Line Chart</option>
+                        <option value="pie">Pie Chart</option>
+                    </select>
+                </div>
+                
+                <div class="control-group">
+                    <label for="timeRange"><i class="fas fa-calendar-alt"></i> Rentang Waktu:</label>
+                    <select id="timeRange" class="form-control" onchange="updateTimeRange(this.value)">
+                        <option value="5">5 Tahun Terakhir</option>
+                        <option value="3">3 Tahun Terakhir</option>
+                        <option value="10">10 Tahun Terakhir</option>
+                    </select>
+                </div>
+                
+                <button class="btn btn-primary" onclick="generateAchievementReport()">
+                    <i class="fas fa-file-pdf"></i> Generate Report
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SMA NEGERI 1 MANDIRI</h3>
+                    <p>Jl. Pendidikan No. 123, Kota Mandiri, Jawa Barat 40123</p>
+                    <p><i class="fas fa-phone"></i> (022) 1234567</p>
+                    <p><i class="fas fa-envelope"></i> info@sman1mandiri.sch.id</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Tautan Cepat</h3>
+                    <ul>
+                        <li><a href="achievements.html">Prestasi Sekolah</a></li>
+                        <li><a href="programs.html">Program Pendidikan</a></li>
+                        <li><a href="students.html">Siswa & Alumni</a></li>
+                        <li><a href="gallery.html">Galeri Prestasi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Media Sosial</h3>
+                    <div class="social-media">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <h3>Kontak Prestasi</h3>
+                    <p><i class="fas fa-envelope"></i> prestasi@sman1mandiri.sch.id</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2023</span> SMA Negeri 1 Mandiri. Hak Cipta Dilindungi.</p>
+                <p>Dikembangkan oleh Tim IT SMA Negeri 1 Mandiri</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Achievement Details -->
+    <div class="modal" id="achievementModal">
+        <div class="modal-content achievement-modal">
+            <span class="modal-close">&times;</span>
+            <div class="modal-body" id="achievementModalBody">
+                <!-- Content will be loaded dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+    <script src="../assets/js/charts.js"></script>
+    
+    <style>
+        /* Additional styles for achievements page */
+        .charts-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .chart-container {
+            background-color: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: var(--shadow);
+        }
+        
+        .chart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .chart-header h3 {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+        
+        .chart-actions {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .chart-action-btn {
+            background: none;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        
+        .chart-action-btn:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .chart-wrapper {
+            position: relative;
+            height: 300px;
+            margin-bottom: 15px;
+        }
+        
+        .chart-footer {
+            font-size: 0.9rem;
+            color: var(--gray-color);
+            padding-top: 15px;
+            border-top: 1px solid #e2e8f0;
+        }
+        
+        .chart-footer i {
+            color: var(--primary-color);
+            margin-right: 5px;
+        }
+        
+        .achievement-card {
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        
+        .achievement-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .achievement-badge {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 2;
+        }
+        
+        .achievement-badge i {
+            font-size: 1.8rem;
+        }
+        
+        .achievement-badge .gold {
+            color: #f59e0b;
+        }
+        
+        .achievement-badge .silver {
+            color: #94a3b8;
+        }
+        
+        .achievement-badge .bronze {
+            color: #92400e;
+        }
+        
+        .achievement-table-container {
+            overflow-x: auto;
+            margin-top: 30px;
+        }
+        
+        .achievement-highlight {
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            gap: 30px;
+        }
+        
+        .highlight-icon {
+            font-size: 4rem;
+            opacity: 0.9;
+        }
+        
+        .highlight-content h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+        
+        .chart-controls {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            align-items: flex-end;
+        }
+        
+        .control-group {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .control-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--dark-color);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 10px 15px;
+            border: 1px solid #d1d5db;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .achievement-modal {
+            max-width: 600px;
+            background-color: white;
+            border-radius: 10px;
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 30px;
+            color: var(--gray-color);
+            cursor: pointer;
+            z-index: 10;
+        }
+        
+        @media (max-width: 992px) {
+            .charts-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .achievement-highlight {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .chart-controls {
+                flex-direction: column;
+            }
+            
+            .control-group {
+                min-width: 100%;
+            }
+        }
+    </style>
+    
+    <script>
+        // Initialize charts for achievements page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Chart 2: Achievement by Category
+            createCustomChart('achievementCategoryChart', 'doughnut', {
+                labels: ['Akademik', 'Olahraga', 'Seni & Budaya', 'Teknologi', 'Lainnya'],
+                datasets: [{
+                    data: [45, 32, 28, 15, 20],
+                    backgroundColor: [
+                        SchoolCharts.colors.primary,
+                        SchoolCharts.colors.secondary,
+                        SchoolCharts.colors.success,
+                        SchoolCharts.colors.warning,
+                        SchoolCharts.colors.gray
+                    ],
+                    borderWidth: 2,
+                    borderColor: '#ffffff'
+                }]
+            }, {
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Distribusi Prestasi per Kategori (5 Tahun)',
+                        font: {
+                            family: "'Poppins', sans-serif",
+                            size: 16,
+                            weight: '600'
+                        },
+                        padding: {
+                            bottom: 20
+                        }
+                    }
+                }
+            });
+            
+            // Add click event to achievement cards for modal
+            const achievementCards = document.querySelectorAll('.achievement-card');
+            achievementCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const title = this.querySelector('h4').textContent;
+                    const details = this.querySelectorAll('p');
+                    
+                    let detailHTML = '';
+                    details.forEach(detail => {
+                        detailHTML += `<p>${detail.innerHTML}</p>`;
+                    });
+                    
+                    const modalBody = document.getElementById('achievementModalBody');
+                    modalBody.innerHTML = `
+                        <h3>${title}</h3>
+                        <div class="achievement-details">
+                            ${detailHTML}
+                        </div>
+                        <div class="modal-actions">
+                            <button class="btn btn-primary" onclick="shareAchievement('${title}')">
+                                <i class="fas fa-share"></i> Bagikan
+                            </button>
+                            <button class="btn btn-outline" onclick="printAchievement('${title}')">
+                                <i class="fas fa-print"></i> Cetak
+                            </button>
+                        </div>
+                    `;
+                    
+                    document.getElementById('achievementModal').style.display = 'flex';
+                });
+            });
+            
+            // Close modal
+            document.querySelector('.modal-close').addEventListener('click', function() {
+                document.getElementById('achievementModal').style.display = 'none';
+            });
+            
+            // Close modal when clicking outside
+            document.getElementById('achievementModal').addEventListener('click', function(e) {
+                if (e.target === this) {
+                    this.style.display = 'none';
+                }
+            });
+        });
+        
+        // Chart control functions
+        function updateChartType(type) {
+            const chart = SchoolCharts.getChartInstance('achievementChart');
+            if (chart) {
+                chart.config.type = type;
+                chart.update();
+            }
+        }
+        
+        function updateTimeRange(years) {
+            // This would typically fetch new data based on the time range
+            alert(`Data untuk ${years} tahun terakhir akan dimuat...`);
+            // In a real implementation, you would fetch new data and update the chart
+        }
+        
+        function generateAchievementReport() {
+            // Simulate PDF generation
+            const btn = event.target;
+            const originalText = btn.innerHTML;
+            
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Membuat Laporan...';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                alert('Laporan prestasi berhasil di-generate dan akan diunduh otomatis.');
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+                
+                // In a real implementation, this would generate and download a PDF
+                // For now, we'll just download a sample
+                const link = document.createElement('a');
+                link.href = '#';
+                link.download = 'Laporan-Prestasi-SMAN1-Mandiri-2023.pdf';
+                link.click();
+            }, 2000);
+        }
+        
+        function shareAchievement(title) {
+            if (navigator.share) {
+                navigator.share({
+                    title: title,
+                    text: `Lihat prestasi ${title} dari SMA Negeri 1 Mandiri`,
+                    url: window.location.href
+                });
+            } else {
+                // Fallback for browsers that don't support Web Share API
+                const shareText = `Prestasi: ${title}\n\nLihat lebih banyak prestasi di: ${window.location.href}`;
+                navigator.clipboard.writeText(shareText).then(() => {
+                    alert('Tautan prestasi telah disalin ke clipboard!');
+                });
+            }
+        }
+        
+        function printAchievement(title) {
+            const printWindow = window.open('', '_blank');
+            printWindow.document.write(`
+                <html>
+                    <head>
+                        <title>Cetak Prestasi - ${title}</title>
+                        <style>
+                            body { font-family: 'Poppins', sans-serif; padding: 40px; }
+                            .header { text-align: center; margin-bottom: 30px; }
+                            .content { max-width: 800px; margin: 0 auto; }
+                            .achievement-title { color: #1e3a8a; margin-bottom: 20px; }
+                            .footer { margin-top: 40px; text-align: center; color: #666; font-size: 14px; }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="header">
+                            <h2>SMA Negeri 1 Mandiri</h2>
+                            <p>Laporan Prestasi Siswa</p>
+                        </div>
+                        <div class="content">
+                            <h3 class="achievement-title">${title}</h3>
+                            <p>Dicetak pada: ${new Date().toLocaleDateString('id-ID', {
+                                weekday: 'long',
+                                year: 'numeric',
+                                month: 'long',
+                                day: 'numeric'
+                            })}</p>
+                            <p>Halaman ini mencetak informasi prestasi siswa SMA Negeri 1 Mandiri.</p>
+                        </div>
+                        <div class="footer">
+                            <p>© ${new Date().getFullYear()} SMA Negeri 1 Mandiri. Hak Cipta Dilindungi.</p>
+                        </div>
+                    </body>
+                </html>
+            `);
+            printWindow.document.close();
+            printWindow.focus();
+            setTimeout(() => {
+                printWindow.print();
+            }, 500);
+        }
+        
+        // Update current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak & Lokasi - SMA Negeri 1 Mandiri</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../assets/css/pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo-container">
+                <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Logo SMA Negeri 1 Mandiri" class="logo">
+                <div class="school-name">
+                    <h1>SMA NEGERI 1 MANDIRI</h1>
+                    <p class="slogan">"Unggul dalam Prestasi, Berkarakter, dan Berbudaya"</p>
+                </div>
+            </div>
+            
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li><a href="../index.html"><i class="fas fa-home"></i> Beranda</a></li>
+                    <li><a href="profile.html"><i class="fas fa-school"></i> Profil Sekolah</a></li>
+                    <li><a href="structure.html"><i class="fas fa-sitemap"></i> Struktur Organisasi</a></li>
+                    <li><a href="programs.html"><i class="fas fa-book-open"></i> Program Pendidikan</a></li>
+                    <li><a href="facilities.html"><i class="fas fa-building"></i> Fasilitas</a></li>
+                    <li><a href="achievements.html"><i class="fas fa-trophy"></i> Prestasi</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="active"><i class="fas fa-bars"></i> Lainnya <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="news.html"><i class="fas fa-newspaper"></i> Berita</a></li>
+                            <li><a href="gallery.html"><i class="fas fa-images"></i> Galeri</a></li>
+                            <li><a href="teachers.html"><i class="fas fa-chalkboard-teacher"></i> Guru & Staf</a></li>
+                            <li><a href="students.html"><i class="fas fa-graduation-cap"></i> Siswa & Alumni</a></li>
+                            <li><a href="admission.html"><i class="fas fa-user-plus"></i> PPDB</a></li>
+                            <li><a href="contact.html" class="active"><i class="fas fa-address-book"></i> Kontak</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Kontak & Lokasi</h1>
+            <p>Informasi Kontak dan Peta Lokasi SMA Negeri 1 Mandiri</p>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="../index.html">Beranda</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>Kontak & Lokasi</span>
+        </div>
+    </div>
+
+    <!-- Contact Information -->
+    <section class="content-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h2 class="section-title">Informasi Kontak</h2>
+                    
+                    <div class="contact-cards">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Alamat Sekolah</h3>
+                                <p>Jl. Pendidikan No. 123</p>
+                                <p>Kelurahan Mandiri Indah, Kecamatan Mandiri Kota</p>
+                                <p>Kota Mandiri, Jawa Barat 40123</p>
+                                <button class="btn-link" onclick="openDirections()">
+                                    <i class="fas fa-directions"></i> Dapatkan Petunjuk Arah
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Telepon & Fax</h3>
+                                <p><strong>Telepon:</strong> (022) 1234567</p>
+                                <p><strong>Fax:</strong> (022) 1234568</p>
+                                <p><strong>Hotline:</strong> (022) 7654321</p>
+                                <button class="btn-link" onclick="callNumber('0221234567')">
+                                    <i class="fas fa-phone"></i> Hubungi Sekarang
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Email & Website</h3>
+                                <p><strong>Email Umum:</strong> info@sman1mandiri.sch.id</p>
+                                <p><strong>Website:</strong> www.sman1mandiri.sch.id</p>
+                                <p><strong>Email PPDB:</strong> ppdb@sman1mandiri.sch.id</p>
+                                <button class="btn-link" onclick="sendEmail('info@sman1mandiri.sch.id')">
+                                    <i class="fas fa-envelope"></i> Kirim Email
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Jam Operasional</h3>
+                                <p><strong>Senin - Kamis:</strong> 07:00 - 16:00 WIB</p>
+                                <p><strong>Jumat:</strong> 07:00 - 15:00 WIB</p>
+                                <p><strong>Sabtu:</strong> 08:00 - 14:00 WIB</p>
+                                <p><strong>Minggu & Libur:</strong> Tutup</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Contact Form -->
+                <div class="quick-contact-form">
+                    <h2 class="section-title">Kirim Pesan Cepat</h2>
+                    <p>Isi formulir di bawah ini untuk mengirim pesan langsung ke sekolah</p>
+                    
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nama Lengkap <span class="required">*</span></label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">No. Telepon <span class="required">*</span></label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subjek <span class="required">*</span></label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Pilih Subjek</option>
+                                <option value="general">Informasi Umum</option>
+                                <option value="admission">PPDB & Pendaftaran</option>
+                                <option value="academic">Akademik</option>
+                                <option value="facility">Fasilitas</option>
+                                <option value="complaint">Pengaduan</option>
+                                <option value="partnership">Kemitraan</option>
+                                <option value="other">Lainnya</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Pesan <span class="required">*</span></label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Tulis pesan Anda di sini..."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" id="newsletter" checked>
+                                Saya ingin menerima newsletter dan informasi terbaru dari sekolah
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Kirim Pesan
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map & Location -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Peta Lokasi</h2>
+            
+            <div class="map-container">
+                <div class="map-wrapper">
+                    <!-- Google Maps Embed -->
+                    <div id="map"></div>
+                </div>
+                <div class="location-info">
+                    <h3><i class="fas fa-map-signs"></i> Petunjuk Menuju Sekolah</h3>
+                    
+                    <div class="transportation-options">
+                        <div class="transport-option active" data-transport="car">
+                            <i class="fas fa-car"></i>
+                            <span>Mobil</span>
+                        </div>
+                        <div class="transport-option" data-transport="motorcycle">
+                            <i class="fas fa-motorcycle"></i>
+                            <span>Motor</span>
+                        </div>
+                        <div class="transport-option" data-transport="bus">
+                            <i class="fas fa-bus"></i>
+                            <span>Angkutan Umum</span>
+                        </div>
+                        <div class="transport-option" data-transport="walking">
+                            <i class="fas fa-walking"></i>
+                            <span>Jalan Kaki</span>
+                        </div>
+                    </div>
+                    
+                    <div class="directions active" id="carDirections">
+                        <h4>Dengan Kendaraan Pribadi</h4>
+                        <ol>
+                            <li>Dari pusat kota, ambil Jalan Sudirman ke arah timur</li>
+                            <li>Belok kiri ke Jalan Gatot Subroto setelah 2 km</li>
+                            <li>Lurus 1.5 km lalu belok kanan ke Jalan Pendidikan</li>
+                            <li>SMA Negeri 1 Mandiri berada di sisi kiri jalan</li>
+                        </ol>
+                        <p><strong>Parkir:</strong> Tersedia area parkir untuk 100 kendaraan</p>
+                    </div>
+                    
+                    <div class="directions" id="busDirections">
+                        <h4>Dengan Angkutan Umum</h4>
+                        <ol>
+                            <li>Naik angkot nomor 05 dari Terminal Kota</li>
+                            <li>Turun di Halte Pendidikan (25 menit)</li>
+                            <li>Berjalan kaki 200 meter ke arah timur</li>
+                            <li>Sekolah berada di sisi kanan jalan</li>
+                        </ol>
+                        <p><strong>Tarif:</strong> Rp 5.000 per orang</p>
+                    </div>
+                    
+                    <div class="nearby-facilities">
+                        <h4>Fasilitas Terdekat</h4>
+                        <div class="facility-list">
+                            <div class="facility-item">
+                                <i class="fas fa-hospital"></i>
+                                <span>Rumah Sakit Mandiri (800m)</span>
+                            </div>
+                            <div class="facility-item">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Minimarket (300m)</span>
+                            </div>
+                            <div class="facility-item">
+                                <i class="fas fa-utensils"></i>
+                                <span>Restoran & Warung (150m)</span>
+                            </div>
+                            <div class="facility-item">
+                                <i class="fas fa-gas-pump"></i>
+                                <span>SPBU (1.2km)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Departments Contact -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Kontak Per Bagian</h2>
+            
+            <div class="departments-grid">
+                <div class="department-card">
+                    <div class="department-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Bagian Akademik</h3>
+                    <p class="department-head">Drs. Bambang Setiawan, M.M.</p>
+                    <div class="department-contact">
+                        <p><i class="fas fa-phone"></i> (022) 1234567 ext. 101</p>
+                        <p><i class="fas fa-envelope"></i> akademik@sman1mandiri.sch.id</p>
+                    </div>
+                    <button class="btn btn-outline" onclick="contactDepartment('akademik@sman1mandiri.sch.id')">
+                        <i class="fas fa-envelope"></i> Hubungi
+                    </button>
+                </div>
+                
+                <div class="department-card">
+                    <div class="department-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Bagian Kesiswaan</h3>
+                    <p class="department-head">Dra. Rina Hartati, M.Pd.</p>
+                    <div class="department-contact">
+                        <p><i class="fas fa-phone"></i> (022) 1234567 ext. 102</p>
+                        <p><i class="fas fa-envelope"></i> kesiswaan@sman1mandiri.sch.id</p>
+                    </div>
+                    <button class="btn btn-outline" onclick="contactDepartment('kesiswaan@sman1mandiri.sch.id')">
+                        <i class="fas fa-envelope"></i> Hubungi
+                    </button>
+                </div>
+                
+                <div class="department-card">
+                    <div class="department-icon">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <h3>Bagian Sarana Prasarana</h3>
+                    <p class="department-head">Ir. Agus Santoso, M.T.</p>
+                    <div class="department-contact">
+                        <p><i class="fas fa-phone"></i> (022) 1234567 ext. 103</p>
+                        <p><i class="fas fa-envelope"></i> sarpras@sman1mandiri.sch.id</p>
+                    </div>
+                    <button class="btn btn-outline" onclick="contactDepartment('sarpras@sman1mandiri.sch.id')">
+                        <i class="fas fa-envelope"></i> Hubungi
+                    </button>
+                </div>
+                
+                <div class="department-card">
+                    <div class="department-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Hubungan Masyarakat</h3>
+                    <p class="department-head">Drs. Joko Prasetyo, M.Si.</p>
+                    <div class="department-contact">
+                        <p><i class="fas fa-phone"></i> (022) 1234567 ext. 104</p>
+                        <p><i class="fas fa-envelope"></i> humas@sman1mandiri.sch.id</p>
+                    </div>
+                    <button class="btn btn-outline" onclick="contactDepartment('humas@sman1mandiri.sch.id')">
+                        <i class="fas fa-envelope"></i> Hubungi
+                    </button>
+                </div>
+                
+                <div class="department-card">
+                    <div class="department-icon">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <h3>Tata Usaha & Keuangan</h3>
+                    <p class="department-head">Hj. Siti Aminah, S.Pd.</p>
+                    <div class="department-contact">
+                        <p><i class="fas fa-phone"></i> (022) 1234567 ext. 105</p>
+                        <p><i class="fas fa-envelope"></i> tatausaha@sman1mandiri.sch.id</p>
+                    </div>
+                    <button class="btn btn-outline" onclick="contactDepartment('tatausaha@sman1mandiri.sch.id')">
+                        <i class="fas fa-envelope"></i> Hubungi
+                    </button>
+                </div>
+                
+                <div class="department-card">
+                    <div class="department-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Teknologi Informasi</h3>
+                    <p class="department-head">Joko Susilo, S.Kom.</p>
+                    <div class="department-contact">
+                        <p><i class="fas fa-phone"></i> (022) 1234567 ext. 106</p>
+                        <p><i class="fas fa-envelope"></i> it.support@sman1mandiri.sch.id</p>
+                    </div>
+                    <button class="btn btn-outline" onclick="contactDepartment('it.support@sman1mandiri.sch.id')">
+                        <i class="fas fa-envelope"></i> Hubungi
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Contacts -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Kontak Darurat</h2>
+            
+            <div class="emergency-contacts">
+                <div class="emergency-card">
+                    <div class="emergency-icon danger">
+                        <i class="fas fa-ambulance"></i>
+                    </div>
+                    <div class="emergency-info">
+                        <h3>Unit Kesehatan Sekolah</h3>
+                        <p class="emergency-number">(022) 7654321</p>
+                        <p>Dokter jaga: Setiap hari 07:00 - 16:00 WIB</p>
+                        <p>Perawat: Dra. Sri Lestari</p>
+                    </div>
+                </div>
+                
+                <div class="emergency-card">
+                    <div class="emergency-icon warning">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="emergency-info">
+                        <h3>Keamanan Sekolah</h3>
+                        <p class="emergency-number">0812-3456-7890</p>
+                        <p>Petugas keamanan 24 jam</p>
+                        <p>Kepala Satpam: Rudi Hartono</p>
+                    </div>
+                </div>
+                
+                <div class="emergency-card">
+                    <div class="emergency-icon info">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="emergency-info">
+                        <h3>Pengaduan & Pelaporan</h3>
+                        <p class="emergency-number">0813-4567-8901</p>
+                        <p>Hotline pengaduan masyarakat</p>
+                        <p>Buka: Senin - Jumat, 08:00 - 16:00 WIB</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media & Newsletter -->
+    <section class="content-section">
+        <div class="container">
+            <div class="social-newsletter">
+                <div class="social-media-section">
+                    <h2 class="section-title">Media Sosial</h2>
+                    <p>Ikuti kami di media sosial untuk informasi terbaru</p>
+                    
+                    <div class="social-media-large">
+                        <a href="#" class="social-link facebook">
+                            <i class="fab fa-facebook-f"></i>
+                            <span>Facebook</span>
+                            <small>@sman1mandiriofficial</small>
+                        </a>
+                        
+                        <a href="#" class="social-link instagram">
+                            <i class="fab fa-instagram"></i>
+                            <span>Instagram</span>
+                            <small>@sman1mandiri</small>
+                        </a>
+                        
+                        <a href="#" class="social-link youtube">
+                            <i class="fab fa-youtube"></i>
+                            <span>YouTube</span>
+                            <small>SMA Negeri 1 Mandiri</small>
+                        </a>
+                        
+                        <a href="#" class="social-link twitter">
+                            <i class="fab fa-twitter"></i>
+                            <span>Twitter</span>
+                            <small>@sman1mandiri</small>
+                        </a>
+                        
+                        <a href="#" class="social-link tiktok">
+                            <i class="fab fa-tiktok"></i>
+                            <span>TikTok</span>
+                            <small>@sman1mandiri</small>
+                        </a>
+                        
+                        <a href="#" class="social-link whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>WhatsApp</span>
+                            <small>0812-3456-7890</small>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="newsletter-section">
+                    <h2 class="section-title">Berlangganan Newsletter</h2>
+                    <p>Dapatkan informasi terbaru langsung ke email Anda</p>
+                    
+                    <form id="newsletterForm" class="newsletter-form">
+                        <div class="form-group">
+                            <input type="email" placeholder="Masukkan email Anda" required>
+                        </div>
+                        <div class="form-group">
+                            <select required>
+                                <option value="">Pilih kategori informasi</option>
+                                <option value="general">Informasi Umum</option>
+                                <option value="academic">Akademik</option>
+                                <option value="event">Acara & Kegiatan</option>
+                                <option value="achievement">Prestasi</option>
+                                <option value="all">Semua Informasi</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Berlangganan
+                        </button>
+                    </form>
+                    
+                    <div class="newsletter-stats">
+                        <div class="stat">
+                            <i class="fas fa-users"></i>
+                            <div>
+                                <h4>2,500+</h4>
+                                <p>Subscriber</p>
+                            </div>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-envelope-open-text"></i>
+                            <div>
+                                <h4>48</h4>
+                                <p>Edisi Terkirim</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visitor Information -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Informasi untuk Pengunjung</h2>
+            
+            <div class="visitor-info">
+                <div class="visitor-card">
+                    <h3><i class="fas fa-clipboard-check"></i> Prosedur Kunjungan</h3>
+                    <ol>
+                        <li>Lapor ke pos satpam utama</li>
+                        <li>Isi buku tamu dan tujuan kunjungan</li>
+                        <li>Dapatkan kartu pengunjung</li>
+                        <li>Temui petugas sesuai tujuan kunjungan</li>
+                        <li>Kembalikan kartu pengunjung saat pulang</li>
+                    </ol>
+                </div>
+                
+                <div class="visitor-card">
+                    <h3><i class="fas fa-exclamation-circle"></i> Peraturan Pengunjung</h3>
+                    <ul>
+                        <li>Wajib menunjukkan identitas diri</li>
+                        <li>Dilarang merokok di area sekolah</li>
+                        <li>Harap menjaga ketertiban dan kebersihan</li>
+                        <li>Fotografi hanya di area yang diizinkan</li>
+                        <li>Patuhi jam kunjungan yang ditetapkan</li>
+                    </ul>
+                </div>
+                
+                <div class="visitor-card">
+                    <h3><i class="fas fa-calendar-alt"></i> Hari Kunjungan</h3>
+                    <div class="visit-schedule">
+                        <div class="schedule-item">
+                            <h4>Orang Tua/Wali</h4>
+                            <p>Senin - Kamis: 13:00 - 15:00</p>
+                            <p>Jumat: 13:00 - 14:00</p>
+                        </div>
+                        <div class="schedule-item">
+                            <h4>Umum & Tamu</h4>
+                            <p>Selasa & Kamis: 09:00 - 12:00</p>
+                            <p>Perlu perjanjian terlebih dahulu</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SMA NEGERI 1 MANDIRI</h3>
+                    <p>Jl. Pendidikan No. 123, Kota Mandiri, Jawa Barat 40123</p>
+                    <p><i class="fas fa-phone"></i> (022) 1234567</p>
+                    <p><i class="fas fa-envelope"></i> info@sman1mandiri.sch.id</p>
+                    <p><i class="fas fa-globe"></i> www.sman1mandiri.sch.id</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Jam Layanan</h3>
+                    <p><strong>Administrasi:</strong> Senin - Jumat, 08:00 - 15:00</p>
+                    <p><strong>Perpustakaan:</strong> Senin - Sabtu, 07:00 - 17:00</p>
+                    <p><strong>UKS:</strong> Senin - Jumat, 07:00 - 16:00</p>
+                    <p><strong>Laboratorium:</strong> Sesuai jadwal praktikum</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Download</h3>
+                    <ul>
+                        <li><a href="#" onclick="downloadFile('profil-sekolah.pdf')"><i class="fas fa-file-pdf"></i> Profil Sekolah</a></li>
+                        <li><a href="#" onclick="downloadFile('brosur-ppdb.pdf')"><i class="fas fa-file-pdf"></i> Brosur PPDB</a></li>
+                        <li><a href="#" onclick="downloadFile('kalender-akademik.pdf')"><i class="fas fa-file-pdf"></i> Kalender Akademik</a></li>
+                        <li><a href="#" onclick="downloadFile('panduan-siswa.pdf')"><i class="fas fa-file-pdf"></i> Panduan Siswa</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2023</span> SMA Negeri 1 Mandiri. Hak Cipta Dilindungi Undang-Undang.</p>
+                <p>Website ini dikembangkan oleh <strong>Tim IT SMA Negeri 1 Mandiri</strong> | Versi 2.1</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Success Modal -->
+    <div class="modal" id="contactSuccessModal">
+        <div class="modal-content success-modal">
+            <div class="modal-body">
+                <div class="success-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h2>Pesan Terkirim!</h2>
+                <p>Terima kasih telah menghubungi SMA Negeri 1 Mandiri. Pesan Anda telah berhasil dikirim dan akan segera kami proses.</p>
+                <p><strong>Nomor Tiket:</strong> <span id="ticketNumber">TCK-2023-001234</span></p>
+                <p>Kami akan membalas pesan Anda dalam waktu 1-2 hari kerja melalui email yang Anda berikan.</p>
+                <div class="modal-actions">
+                    <button class="btn btn-primary" onclick="printTicket()">
+                        <i class="fas fa-print"></i> Cetak Tiket
+                    </button>
+                    <button class="btn btn-outline" onclick="closeSuccessModal()">
+                        Tutup
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+    <script src="../assets/js/form-validation.js"></script>
+    
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    
+    <style>
+        /* Contact page specific styles */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        
+        .contact-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .contact-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: var(--shadow);
+            display: flex;
+            gap: 20px;
+            transition: transform 0.3s ease;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .contact-icon {
+            flex: 0 0 60px;
+            height: 60px;
+            background-color: #f1f5f9;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+        
+        .contact-details h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        .contact-details p {
+            margin-bottom: 5px;
+            line-height: 1.5;
+        }
+        
+        .btn-link {
+            background: none;
+            border: none;
+            color: var(--primary-color);
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 15px;
+            padding: 0;
+        }
+        
+        .btn-link:hover {
+            text-decoration: underline;
+        }
+        
+        .quick-contact-form {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+        }
+        
+        .quick-contact-form .section-title {
+            margin-bottom: 10px;
+        }
+        
+        .quick-contact-form > p {
+            margin-bottom: 25px;
+            color: var(--gray-color);
+        }
+        
+        .required {
+            color: var(--danger-color);
+        }
+        
+        .map-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .map-wrapper {
+            height: 500px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        #map {
+            width: 100%;
+            height: 100%;
+            background-color: #f1f5f9;
+        }
+        
+        .location-info {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+        }
+        
+        .transportation-options {
+            display: flex;
+            gap: 10px;
+            margin: 25px 0;
+            flex-wrap: wrap;
+        }
+        
+        .transport-option {
+            flex: 1;
+            min-width: 100px;
+            padding: 15px;
+            background-color: #f8fafc;
+            border: 2px solid transparent;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .transport-option:hover,
+        .transport-option.active {
+            border-color: var(--primary-color);
+            background-color: white;
+        }
+        
+        .transport-option i {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        .directions {
+            display: none;
+            margin-bottom: 30px;
+        }
+        
+        .directions.active {
+            display: block;
+        }
+        
+        .directions h4 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        .directions ol {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .directions li {
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+        
+        .nearby-facilities {
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+        }
+        
+        .facility-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .facility-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .facility-item i {
+            width: 30px;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+        
+        .departments-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .department-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .department-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .department-icon {
+            width: 70px;
+            height: 70px;
+            background-color: #f1f5f9;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin: 0 auto 20px;
+        }
+        
+        .department-card h3 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        .department-head {
+            color: var(--gray-color);
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+        
+        .department-contact {
+            margin-bottom: 20px;
+        }
+        
+        .department-contact p {
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+            color: var(--gray-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .emergency-contacts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .emergency-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: var(--shadow);
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            border-left: 5px solid transparent;
+        }
+        
+        .emergency-icon {
+            flex: 0 0 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+        }
+        
+        .emergency-icon.danger {
+            background-color: #ef4444;
+        }
+        
+        .emergency-icon.warning {
+            background-color: #f59e0b;
+        }
+        
+        .emergency-icon.info {
+            background-color: #3b82f6;
+        }
+        
+        .emergency-info h3 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        .emergency-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .emergency-info p {
+            margin-bottom: 5px;
+            color: var(--gray-color);
+            font-size: 0.9rem;
+        }
+        
+        .social-newsletter {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        
+        .social-media-large {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 25px;
+        }
+        
+        .social-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 15px;
+            border-radius: 10px;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .social-link:hover {
+            transform: translateY(-5px);
+        }
+        
+        .social-link i {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        
+        .social-link span {
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        
+        .social-link small {
+            font-size: 0.8rem;
+            opacity: 0.9;
+        }
+        
+        .social-link.facebook {
+            background-color: #1877f2;
+        }
+        
+        .social-link.instagram {
+            background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+        }
+        
+        .social-link.youtube {
+            background-color: #ff0000;
+        }
+        
+        .social-link.twitter {
+            background-color: #1da1f2;
+        }
+        
+        .social-link.tiktok {
+            background-color: #000000;
+        }
+        
+        .social-link.whatsapp {
+            background-color: #25d366;
+        }
+        
+        .newsletter-section {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+        }
+        
+        .newsletter-form {
+            margin-top: 25px;
+        }
+        
+        .newsletter-form .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .newsletter-stats {
+            display: flex;
+            gap: 30px;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+        }
+        
+        .newsletter-stats .stat {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .newsletter-stats i {
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+        
+        .newsletter-stats h4 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+        
+        .visitor-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .visitor-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: var(--shadow);
+        }
+        
+        .visitor-card h3 {
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .visitor-card ol,
+        .visitor-card ul {
+            padding-left: 20px;
+        }
+        
+        .visitor-card li {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        
+        .visit-schedule {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .schedule-item h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .success-modal {
+            max-width: 500px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .modal-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        
+        @media (max-width: 992px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .map-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .social-newsletter {
+                grid-template-columns: 1fr;
+            }
+            
+            .social-media-large {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .departments-grid,
+            .emergency-contacts,
+            .visitor-info {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .transportation-options {
+                justify-content: center;
+            }
+            
+            .transport-option {
+                min-width: 80px;
+            }
+        }
+    </style>
+    
+    <script>
+        // Contact page functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize form validation
+            setupContactForm();
+            
+            // Initialize transportation options
+            setupTransportationOptions();
+            
+            // Initialize Google Maps
+            initMap();
+            
+            // Initialize newsletter form
+            setupNewsletterForm();
+            
+            // Update current year in footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+        });
+        
+        function setupContactForm() {
+            const form = document.getElementById('contactForm');
+            
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Validate form
+                let isValid = true;
+                const requiredFields = form.querySelectorAll('[required]');
+                
+                requiredFields.forEach(field => {
+                    if (!field.value.trim()) {
+                        isValid = false;
+                        field.style.borderColor = '#ef4444';
+                        
+                        let errorMsg = field.parentNode.querySelector('.error-message');
+                        if (!errorMsg) {
+                            errorMsg = document.createElement('div');
+                            errorMsg.className = 'error-message';
+                            errorMsg.textContent = 'Field ini wajib diisi';
+                            errorMsg.style.cssText = `
+                                color: #ef4444;
+                                font-size: 0.875rem;
+                                margin-top: 5px;
+                            `;
+                            field.parentNode.appendChild(errorMsg);
+                        }
+                    } else {
+                        field.style.borderColor = '';
+                        const errorMsg = field.parentNode.querySelector('.error-message');
+                        if (errorMsg) {
+                            errorMsg.remove();
+                        }
+                        
+                        // Validate email
+                        if (field.type === 'email' && !isValidEmail(field.value)) {
+                            isValid = false;
+                            field.style.borderColor = '#ef4444';
+                            alert('Format email tidak valid');
+                        }
+                    }
+                });
+                
+                if (isValid) {
+                    // Show loading state
+                    const submitBtn = form.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.innerHTML;
+                    
+                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Mengirim...';
+                    submitBtn.disabled = true;
+                    
+                    // Simulate form submission
+                    setTimeout(() => {
+                        showSuccessModal();
+                        form.reset();
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.disabled = false;
+                    }, 1500);
+                }
+            });
+        }
+        
+        function isValidEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+        
+        function setupTransportationOptions() {
+            const transportOptions = document.querySelectorAll('.transport-option');
+            const directionSections = document.querySelectorAll('.directions');
+            
+            transportOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    const transportType = this.getAttribute('data-transport');
+                    
+                    // Remove active class from all options
+                    transportOptions.forEach(opt => opt.classList.remove('active'));
+                    // Add active class to clicked option
+                    this.classList.add('active');
+                    
+                    // Hide all direction sections
+                    directionSections.forEach(section => section.classList.remove('active'));
+                    
+                    // Show corresponding direction section
+                    const directionId = transportType + 'Directions';
+                    const directionSection = document.getElementById(directionId);
+                    if (directionSection) {
+                        directionSection.classList.add('active');
+                    }
+                });
+            });
+        }
+        
+        function initMap() {
+            // In a real application, you would use Google Maps API
+            // For demo purposes, we'll create a placeholder
+            const mapElement = document.getElementById('map');
+            
+            // Create a simple placeholder for the map
+            mapElement.innerHTML = `
+                <div style="width:100%;height:100%;background:#f1f5f9;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:20px;color:var(--primary-color);">
+                    <i class="fas fa-map-marker-alt" style="font-size:3rem;"></i>
+                    <h3 style="margin:0;">Lokasi SMA Negeri 1 Mandiri</h3>
+                    <p style="margin:0;text-align:center;max-width:300px;">
+                        Jl. Pendidikan No. 123, Kota Mandiri<br>
+                        Jawa Barat 40123
+                    </p>
+                    <button class="btn btn-primary" onclick="openGoogleMaps()" style="margin-top:20px;">
+                        <i class="fas fa-external-link-alt"></i> Buka di Google Maps
+                    </button>
+                </div>
+            `;
+        }
+        
+        function setupNewsletterForm() {
+            const form = document.getElementById('newsletterForm');
+            
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const email = this.querySelector('input[type="email"]').value;
+                const category = this.querySelector('select').value;
+                
+                if (email && category) {
+                    // Show loading state
+                    const submitBtn = this.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.innerHTML;
+                    
+                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Memproses...';
+                    submitBtn.disabled = true;
+                    
+                    // Simulate subscription
+                    setTimeout(() => {
+                        alert('Terima kasih! Anda telah berhasil berlangganan newsletter SMA Negeri 1 Mandiri.');
+                        form.reset();
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.disabled = false;
+                    }, 1000);
+                }
+            });
+        }
+        
+        // Utility functions
+        function openDirections() {
+            const address = "Jl. Pendidikan No. 123, Kota Mandiri, Jawa Barat 40123";
+            const url = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(address)}`;
+            window.open(url, '_blank');
+        }
+        
+        function callNumber(phoneNumber) {
+            window.location.href = `tel:${phoneNumber}`;
+        }
+        
+        function sendEmail(emailAddress) {
+            window.location.href = `mailto:${emailAddress}`;
+        }
+        
+        function contactDepartment(email) {
+            window.location.href = `mailto:${email}`;
+        }
+        
+        function downloadFile(filename) {
+            // In a real application, this would download the actual file
+            alert(`Mengunduh file: ${filename}`);
+            // window.location.href = `/downloads/${filename}`;
+        }
+        
+        function openGoogleMaps() {
+            const address = "Jl. Pendidikan No. 123, Kota Mandiri, Jawa Barat";
+            const url = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+            window.open(url, '_blank');
+        }
+        
+        function showSuccessModal() {
+            // Generate ticket number
+            const ticketNumber = 'TCK-' + new Date().getFullYear() + '-' + Math.floor(100000 + Math.random() * 900000);
+            document.getElementById('ticketNumber').textContent = ticketNumber;
+            
+            document.getElementById('contactSuccessModal').style.display = 'flex';
+        }
+        
+        function closeSuccessModal() {
+            document.getElementById('contactSuccessModal').style.display = 'none';
+        }
+        
+        function printTicket() {
+            const ticketNumber = document.getElementById('ticketNumber').textContent;
+            const printWindow = window.open('', '_blank');
+            
+            printWindow.document.write(`
+                <html>
+                    <head>
+                        <title>Bukti Tiket Kontak - SMA Negeri 1 Mandiri</title>
+                        <style>
+                            body { font-family: 'Poppins', sans-serif; padding: 40px; }
+                            .header { text-align: center; margin-bottom: 30px; }
+                            .ticket-info { background: #f8fafc; padding: 30px; border-radius: 10px; margin: 30px 0; }
+                            .ticket-number { font-size: 24px; font-weight: bold; color: #1e3a8a; text-align: center; margin: 20px 0; }
+                            .info { margin-top: 30px; }
+                            .footer { margin-top: 40px; text-align: center; color: #666; font-size: 14px; }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="header">
+                            <h2>SMA Negeri 1 Mandiri</h2>
+                            <p>Bukti Tiket Kontak dan Pengaduan</p>
+                        </div>
+                        
+                        <div class="ticket-info">
+                            <h3>Nomor Tiket</h3>
+                            <div class="ticket-number">${ticketNumber}</div>
+                            <p>Tanggal: ${new Date().toLocaleDateString('id-ID', {
+                                weekday: 'long',
+                                year: 'numeric',
+                                month: 'long',
+                                day: 'numeric',
+                                hour: '2-digit',
+                                minute: '2-digit'
+                            })}</p>
+                        </div>
+                        
+                        <div class="info">
+                            <h4>Informasi Penting:</h4>
+                            <ol>
+                                <li>Simpan bukti tiket ini untuk referensi</li>
+                                <li>Kami akan menghubungi Anda dalam 1-2 hari kerja</li>
+                                <li>Anda dapat melacak status tiket dengan nomor di atas</li>
+                                <li>Untuk pertanyaan darurat, hubungi (022) 7654321</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="footer">
+                            <p>© ${new Date().getFullYear()} SMA Negeri 1 Mandiri. Hak Cipta Dilindungi.</p>
+                            <p>Dicetak pada: ${new Date().toLocaleString('id-ID')}</p>
+                        </div>
+                    </body>
+                </html>
+            `);
+            printWindow.document.close();
+            printWindow.focus();
+            setTimeout(() => {
+                printWindow.print();
+            }, 500);
+        }
+        
+        // Close modal when clicking outside
+        document.getElementById('contactSuccessModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeSuccessModal();
+            }
+        });
+    </script>
+</body>
+</html>
